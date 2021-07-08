@@ -18,7 +18,7 @@ const FoodState = ({ children }) => {
     const getFoods = async () => {
         try {
             const res = await axios.get(api);
-            const fewFoods = res.data.data.meals.slice(0, 5);
+            const fewFoods = res.data.data.meals.slice(0, 6);
 
             dispatch({ type: GET_FOODS, payload: fewFoods });
         } catch (error) {
