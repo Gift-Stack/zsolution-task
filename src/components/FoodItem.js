@@ -42,8 +42,16 @@ const FoodItem = ({ food }) => {
                         {strMeal}
                     </p>
                     <p
-                        className='card-text text-truncate'
-                        style={{ fontSize: 'small' }}
+                        className='card-text'
+                        style={{
+                            fontSize: 'small',
+                            overflow: 'hidden',
+                            maxHeight: '3.5rem',
+                            WebkitBoxOrient: 'vertical',
+                            display: 'block',
+                            textOverflow: 'ellipsis',
+                            WebkitLineClamp: 4,
+                        }}
                     >
                         {description}
                     </p>
@@ -114,7 +122,7 @@ const FoodItem = ({ food }) => {
                         ></i>
                     </div>
                     <a
-                        href='#h'
+                        href='!#'
                         className='btn'
                         style={{
                             background: '#FFA500',
