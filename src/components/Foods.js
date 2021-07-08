@@ -25,7 +25,7 @@ const Foods = () => {
         <div className='container'>
             {!loading ? (
                 <div className='container my-2'>
-                    <div className='row row-cols-1 row-cols-sm-2 row-cols-lg-3 gy-4 gx-n5'>
+                    <div className='row row-cols-1 row-cols-sm-2 row-cols-lg-3 gy-4'>
                         {foods.map(food => (
                             <div
                                 className='px-sm-5 d-flex justify-content-center'
