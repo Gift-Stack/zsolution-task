@@ -15,9 +15,9 @@ const Foods = () => {
         <div className='container'>
             {!loading ? (
                 <div className='container my-2'>
-                    <div className='row row-cols-1 row-cols-sm-2 row-cols-md-3 gy-4'>
+                    <div className='row row-cols-1 row-cols-sm-2 row-cols-lg-3 gy-4'>
                         {foods.map(food => (
-                            <div>
+                            <div className='px-sm-5'>
                                 <FoodItem key={food.id} food={food} />
                             </div>
                         ))}

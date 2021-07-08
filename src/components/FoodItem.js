@@ -3,7 +3,7 @@ const FoodItem = ({ food }) => {
 
     // console.log(strMealThumb, title, ratings, price, description, strMeal);
     return (
-        <div className='col container-lg'>
+        <div className='col'>
             <div
                 className='card'
                 style={{
@@ -11,11 +11,12 @@ const FoodItem = ({ food }) => {
                     borderBottomLeftRadius: '20px',
                     borderTopLeftRadius: 0,
                     borderBottomRightRadius: 0,
+                    // width: 220,
                 }}
             >
                 <img
                     src={strMealThumb}
-                    className='card-img-top'
+                    className='card-img-top img-fluid'
                     alt='...'
                     style={{
                         borderTopRightRadius: '20px',
@@ -28,15 +29,25 @@ const FoodItem = ({ food }) => {
                         className='d-flex justify-content-between'
                         // style={{ lineHeight: 0 }}
                     >
-                        <h5 className='card-title'>{title}</h5>
+                        <h5 className='card-title'>
+                            <strong>{title}</strong>
+                        </h5>
                         <p>
                             <strong>{price}</strong>
                         </p>
                     </div>
-                    <p className='pt-0' style={{ fontSize: 'small' }}>
+                    <p
+                        className=''
+                        style={{ fontSize: 'small', marginTop: '-15px' }}
+                    >
                         {strMeal}
                     </p>
-                    <p className='card-text text-truncate'>{description}</p>
+                    <p
+                        className='card-text text-truncate'
+                        style={{ fontSize: 'small' }}
+                    >
+                        {description}
+                    </p>
                 </div>
                 <div className='d-flex justify-content-between'>
                     <div className='icons px-3'>
