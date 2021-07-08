@@ -2,7 +2,7 @@ import { useReducer } from 'react';
 import axios from 'axios';
 import FoodContext from './foodContext';
 import FoodReducer from './foodReducer';
-import { GET_FOODS } from './types';
+import { GET_FOODS, GET_ALL_FOODS } from './types';
 
 const FoodState = ({ children }) => {
     const initialState = {
@@ -17,9 +17,21 @@ const FoodState = ({ children }) => {
     // Get foods
     const getFoods = async () => {
         try {
-            const res = await axios.get(api, { params: { _limit: 6 } });
+            const res = await axios.get(api);
+            const fewFoods = res.data.data.meals.slice(0, 5);
 
-            dispatch({ type: GET_FOODS, payload: res.data.data.meals });
+            dispatch({ type: GET_FOODS, payload: fewFoods });
+        } catch (error) {
+            console.error(error);
+        }
+    };
+
+    // Get all foods
+    const getAllFoods = async () => {
+        try {
+            const res = await axios.get(api);
+
+            dispatch({ type: GET_ALL_FOODS, payload: res.data.data.meals });
         } catch (error) {
             console.error(error);
         }
@@ -31,6 +43,7 @@ const FoodState = ({ children }) => {
                 loading: state.loading,
                 foods: state.foods,
                 getFoods,
+                getAllFoods,
             }}
         >
             {children}

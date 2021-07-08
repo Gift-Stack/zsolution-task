@@ -1,15 +1,25 @@
-import { useContext, useEffect } from 'react';
+import { useContext, useEffect, useState } from 'react';
 
 import FoodContext from '../context/foodContext';
 import FoodItem from './FoodItem';
 import Loading from './Loading';
 
 const Foods = () => {
-    const { getFoods, foods, loading } = useContext(FoodContext);
+    const [learnMore, setLearnMore] = useState(false);
+    const { getFoods, getAllFoods, foods, loading } = useContext(FoodContext);
+    // const sliceFoods = foods && foods.splice(0, 5);
+
+    const handleLearnMore = () => {
+        setLearnMore(true);
+    };
     useEffect(() => {
         getFoods();
         //eslint-disable-next-line
     }, []);
+    useEffect(() => {
+        learnMore && getAllFoods();
+        // eslint-disable-next-line
+    }, [learnMore]);
 
     return (
         <div className='container'>
@@ -24,6 +34,21 @@ const Foods = () => {
                                 <FoodItem key={food.id} food={food} />
                             </div>
                         ))}
+                    </div>
+                    <div className='d-flex justify-content-center my-5'>
+                        <p
+                            className='btn btn-primary badge-pill'
+                            onClick={handleLearnMore}
+                            style={{
+                                display: `${learnMore && 'none'}`,
+                                background: '#FFA500',
+                                border: '#FFA500',
+                                borderRadius: 50,
+                                fontSize: 'small',
+                            }}
+                        >
+                            Learn more
+                        </p>
                     </div>
                 </div>
             ) : (
