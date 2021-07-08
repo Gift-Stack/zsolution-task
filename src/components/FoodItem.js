@@ -19,7 +19,7 @@ const FoodItem = ({ food }) => {
                     src={strMealThumb}
                     className='card-img-top'
                     alt='...'
-                    height='210px'
+                    height='230px'
                     style={{
                         borderTopRightRadius: '15px',
                         borderTopLeftRadius: 0,
