@@ -1,7 +1,6 @@
 const FoodItem = ({ food }) => {
     const { strMealThumb, title, ratings, price, description, strMeal } = food;
 
-    // console.log(strMealThumb, title, ratings, price, description, strMeal);
     return (
         <div className='col' style={{ width: 230 }}>
             <div
@@ -12,7 +11,6 @@ const FoodItem = ({ food }) => {
                     borderTopLeftRadius: 0,
                     borderBottomRightRadius: 0,
                     boxShadow: '0 3px 10px rgb(0 0 0 / 0.2)',
-                    // width: 230,
                 }}
             >
                 <img

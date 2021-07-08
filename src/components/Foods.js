@@ -7,7 +7,6 @@ import Loading from './Loading';
 const Foods = () => {
     const [learnMore, setLearnMore] = useState(false);
     const { getFoods, getAllFoods, foods, loading } = useContext(FoodContext);
-    // const sliceFoods = foods && foods.splice(0, 5);
 
     const handleLearnMore = () => {
         setLearnMore(true);
@@ -27,10 +26,7 @@ const Foods = () => {
                 <div className='container my-2'>
                     <div className='row row-cols-1 row-cols-sm-2 row-cols-lg-3 gy-4'>
                         {foods.map(food => (
-                            <div
-                                className='px-sm-5 d-flex justify-content-center'
-                                // style={{ maxWidth: 260 }}
-                            >
+                            <div className='px-sm-5 d-flex justify-content-center'>
                                 <FoodItem key={food.id} food={food} />
                             </div>
                         ))}
