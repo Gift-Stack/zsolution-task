@@ -49,7 +49,7 @@ const FoodItem = ({ food }) => {
                         {description}
                     </p>
                 </div>
-                <div className='d-flex justify-content-between'>
+                <div className='d-flex justify-content-between align-items-center'>
                     <div className='icons px-3'>
                         <i
                             className='bi bi-star-fill'
@@ -127,8 +127,8 @@ const FoodItem = ({ food }) => {
                     >
                         <svg
                             xmlns='http://www.w3.org/2000/svg'
-                            width='30'
-                            height='30'
+                            width='35'
+                            height='35'
                             fill='white'
                             className='bi bi-plus'
                             viewBox='0 0 16 16'
