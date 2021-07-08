@@ -3,32 +3,31 @@ const FoodItem = ({ food }) => {
 
     // console.log(strMealThumb, title, ratings, price, description, strMeal);
     return (
-        <div className='col'>
+        <div className='col' style={{ width: 230 }}>
             <div
                 className='card'
                 style={{
-                    borderTopRightRadius: '20px',
-                    borderBottomLeftRadius: '20px',
+                    borderTopRightRadius: '15px',
+                    borderBottomLeftRadius: '15px',
                     borderTopLeftRadius: 0,
                     borderBottomRightRadius: 0,
-                    // width: 220,
+                    boxShadow: '0 3px 10px rgb(0 0 0 / 0.2)',
+                    // width: 230,
                 }}
             >
                 <img
                     src={strMealThumb}
-                    className='card-img-top img-fluid'
+                    className='card-img-top'
                     alt='...'
+                    height='210px'
                     style={{
-                        borderTopRightRadius: '20px',
+                        borderTopRightRadius: '15px',
                         borderTopLeftRadius: 0,
-                        borderBottomLeftRadius: '20px',
+                        borderBottomLeftRadius: '15px',
                     }}
                 />
                 <div className='py-3 px-2'>
-                    <div
-                        className='d-flex justify-content-between'
-                        // style={{ lineHeight: 0 }}
-                    >
+                    <div className='d-flex justify-content-between'>
                         <h5 className='card-title'>
                             <strong>{title}</strong>
                         </h5>
@@ -127,8 +126,8 @@ const FoodItem = ({ food }) => {
                     >
                         <svg
                             xmlns='http://www.w3.org/2000/svg'
-                            width='35'
-                            height='35'
+                            width='30'
+                            height='30'
                             fill='white'
                             className='bi bi-plus'
                             viewBox='0 0 16 16'

@@ -15,9 +15,12 @@ const Foods = () => {
         <div className='container'>
             {!loading ? (
                 <div className='container my-2'>
-                    <div className='row row-cols-1 row-cols-sm-2 row-cols-lg-3 gy-4'>
+                    <div className='row row-cols-1 row-cols-sm-2 row-cols-lg-3 gy-4 gx-n5'>
                         {foods.map(food => (
-                            <div className='px-sm-5'>
+                            <div
+                                className='px-sm-5 d-flex justify-content-center'
+                                // style={{ maxWidth: 260 }}
+                            >
                                 <FoodItem key={food.id} food={food} />
                             </div>
                         ))}
