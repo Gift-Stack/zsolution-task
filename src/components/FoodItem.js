@@ -19,7 +19,7 @@ const FoodItem = ({ food }) => {
                     src={strMealThumb}
                     className='card-img-top'
                     alt='...'
-                    height='230px'
+                    height='210px'
                     style={{
                         borderTopRightRadius: '15px',
                         borderTopLeftRadius: 0,
@@ -37,16 +37,16 @@ const FoodItem = ({ food }) => {
                     </div>
                     <p
                         className=''
-                        style={{ fontSize: 'small', marginTop: '-15px' }}
+                        style={{ fontSize: '11px', marginTop: '-15px' }}
                     >
                         {strMeal}
                     </p>
                     <p
                         className='card-text'
                         style={{
-                            fontSize: 'small',
+                            fontSize: '11px',
                             overflow: 'hidden',
-                            maxHeight: '3.5rem',
+                            maxHeight: '3rem',
                             WebkitBoxOrient: 'vertical',
                             display: 'block',
                             textOverflow: 'ellipsis',
@@ -70,7 +70,7 @@ const FoodItem = ({ food }) => {
                                         ? '#FFA500'
                                         : 'lightgrey'
                                 }`,
-                                fontSize: 'small',
+                                fontSize: '11px',
                             }}
                         ></i>
                         <i
@@ -84,7 +84,7 @@ const FoodItem = ({ food }) => {
                                         ? '#FFA500'
                                         : 'lightgrey'
                                 }`,
-                                fontSize: 'small',
+                                fontSize: '11px',
                             }}
                         ></i>
                         <i
@@ -97,7 +97,7 @@ const FoodItem = ({ food }) => {
                                         ? '#FFA500'
                                         : 'lightgrey'
                                 }`,
-                                fontSize: 'small',
+                                fontSize: '11px',
                             }}
                         ></i>
                         <i
@@ -108,7 +108,7 @@ const FoodItem = ({ food }) => {
                                         ? '#FFA500'
                                         : 'lightgrey'
                                 }`,
-                                fontSize: 'small',
+                                fontSize: '11px',
                             }}
                         ></i>
                         <i
@@ -117,7 +117,7 @@ const FoodItem = ({ food }) => {
                                 color: `${
                                     ratings === 5 ? '#FFA500' : 'lightgrey'
                                 }`,
-                                fontSize: 'small',
+                                fontSize: '11px',
                             }}
                         ></i>
                     </div>
